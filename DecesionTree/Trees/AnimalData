@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<milk &le; 0.5<br/>gini = 0.735<br/>samples = 72<br/>value = [2, 15, 10, 2, 8, 31, 4]<br/>class = amphibian>, fillcolor="#b139e548"] ;
+1 [label=<feathers &le; 0.5<br/>gini = 0.754<br/>samples = 41<br/>value = [2, 15, 10, 2, 8, 0, 4]<br/>class = fish>, fillcolor="#b7e53929"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<fins &le; 0.5<br/>gini = 0.722<br/>samples = 26<br/>value = [2, 0, 10, 2, 8, 0, 4]<br/>class = bird>, fillcolor="#39e54d1c"] ;
+1 -> 2 ;
+3 [label=<toothed &le; 0.5<br/>gini = 0.656<br/>samples = 16<br/>value = [2, 0, 0, 2, 8, 0, 4]<br/>class = insect>, fillcolor="#3956e555"] ;
+2 -> 3 ;
+4 [label=<airborne &le; 0.5<br/>gini = 0.32<br/>samples = 10<br/>value = [0, 0, 0, 2, 8, 0, 0]<br/>class = insect>, fillcolor="#3956e5bf"] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 8<br/>value = [0, 0, 0, 0, 8, 0, 0]<br/>class = insect>, fillcolor="#3956e5ff"] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 0, 2, 0, 0, 0]<br/>class = invertebrate>, fillcolor="#39e5e2ff"] ;
+4 -> 6 ;
+7 [label=<tail &le; 0.5<br/>gini = 0.444<br/>samples = 6<br/>value = [2, 0, 0, 0, 0, 0, 4]<br/>class = reptile>, fillcolor="#e539867f"] ;
+3 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 2<br/>value = [2, 0, 0, 0, 0, 0, 0]<br/>class = mammal>, fillcolor="#e58139ff"] ;
+7 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 0, 0, 4]<br/>class = reptile>, fillcolor="#e53986ff"] ;
+7 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 10<br/>value = [0, 0, 10, 0, 0, 0, 0]<br/>class = bird>, fillcolor="#39e54dff"] ;
+2 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 15<br/>value = [0, 15, 0, 0, 0, 0, 0]<br/>class = fish>, fillcolor="#b7e539ff"] ;
+1 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 31<br/>value = [0, 0, 0, 0, 0, 31, 0]<br/>class = amphibian>, fillcolor="#b139e5ff"] ;
+0 -> 12 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
